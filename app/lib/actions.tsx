@@ -1,10 +1,9 @@
 'use server'
 
 import {z} from 'zod'
-import postgres from 'postgres';
-const sql = postgres(process.env.POSTGRES_URL!, {
-  ssl: 'require',
-});
+
+import { sql } from "@/app/lib/sql";
+
  
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
@@ -29,7 +28,6 @@ export async function authenticate(
     throw error;
   }
 }
-//onst sql= postgres(process.env.POSTGRES_URL!,{ssl:require})
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 //import { CreateInvoice } from '../ui/invoices/buttons';
@@ -176,6 +174,3 @@ export async function deleteInvoice(id: string) {
 }
 
  
-//export async function createInvoice(prevState: State, formData: FormData) {
-  // ...
-//}
