@@ -1,7 +1,7 @@
 //import bcrypt from 'bcrypt';
 //import postgres from 'postgres';
 //import { invoices, customers, revenue, users } from '../lib/placeholder-data';
-import { sql } from '@/app/lib/sgl';
+import { sql } from '@/app/lib/sql';
 import bcrypt from 'bcrypt';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 

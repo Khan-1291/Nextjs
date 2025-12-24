@@ -9,3 +9,5 @@ if (!databaseUrl) {
 export const sql = postgres(databaseUrl, {
   ssl: 'require',
 });
+
+
